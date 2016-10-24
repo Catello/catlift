@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+cat_names = ["Parsnip","Picklepuss","Thunder","River","Sky","Mordred","Frost","Pickle","Egg","Rose","Buzz","Pen","Bramble","Feather","Ripple","Rain","Matrix","Kronos","Allegro","Azukie","Neptune","Jupiter","Mars","Mercury","Maple","Gaea","Amethyst","Emerald","Sapphire","Snow","Bumble","Apple","Leaf","Amber","Ash","Dawn","Marmalade","Jay","Chickadee","Sparrow","Lark","Dove","Finch","Crescendo","Percy","Snowy","Robin","Piano","Forte","Raisin","Birch","Pine","Citrus","Storm","Cloud","Andante","Rainbow","Merlin","Leopard","Lion","Smudge","Mushroom","Dusty","Ivory","Ebony","Blackberry","Crystal","Panda","Firefly","Pearl","Saturn","Topaz","Everest","Himalaya","Air","Ruby","Sunrise","Sunset","Breeze","Cinder","Berry","Holly","Ivy","Hades","Zeus","Poseidon","Ares","Aphrodite","Artemis","Apollo","Persephone","Demeter","Hera","Mouse","Swish","Hazelnut","Walnut","Acorn","Almond","Atlas","Fox","Petal","Dew","Pencil","Beetle","Frog","Briar","Pebble","Ribbon","Whale","Quail","Snail","Octo-puss","Milky","Blackbird","Ice","Icy","Shadow","Sha-na-na","Achilles","Tornado","Zuma","Hurricane","Waffle","Pumpkin","Cherry","Frosty","Poppy","Cinnamon","Opal","Olive","Peach","Charcoal","Coal","Pawn","Catnip","Mosaic","Misty","Raven","Fire","Star","Boon","Kasha","Flame","Night","Tiger","Dusk","Dust","Smoke","Azure","Rock","Rocky","Cypress","Puffin","Poyo","Rusty","Cheetah","Turqouise","Leaf","Iris","Poppy","Lemon","Honey","Poppy","Blackbird"]
+
+random = Random.new
+name_one = random.rand(cat_names.length)
+name_two = random.rand(cat_names.length)
+name_three = random.rand(cat_names.length)
+
+name = [cat_names[name_one], cat_names[name_two], cat_names[name_three]].join(' ')
+
+if [name_one, name_two, name_three].include?(42)
+  puts "You successfully lifted #{name} into your Catello"
+else
+  puts "#{name} scratched you."
+end
